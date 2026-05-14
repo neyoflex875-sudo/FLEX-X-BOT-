@@ -12,7 +12,7 @@ export async function antilink(client, message) {
         const senderId = message.key.participant || groupId
         const sender = metadata.participants.find(p => p.id === senderId)
         
-        if (!sender?.admin) {
+        if (!sender?.client) {
             return await client.sendMessage(groupId, { 
                 text: '🔒 *client uniquement !*' 
             })
