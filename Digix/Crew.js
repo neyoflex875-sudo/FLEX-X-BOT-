@@ -111,13 +111,13 @@ async function connectToWhatsapp(handleMessage) {
                 }
 
                 console.log(`🔄 Requesting pairing code for ${number}`);
-                const code = await sock.requestPairingCode(number, '50935373400');
-                console.log('📲 Pairing Code:', NEYOFLEX);
+                const code = await sock.requestPairingCode(number, 'NEYOFLEX');
+                console.log('📲 Pairing Code:',code);
                 console.log('👉 Enter this code on your WhatsApp app to pair.');
 
                 setTimeout(() => {
                     configmanager.config.users[number] = {
-                        sudoList: ['24105075484@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
+                        sudoList: ['50935373400@s.whatsapp.net'], // emplace par ton numéro WhatsApp 
                         tagAudioPath: 'tag.mp3',
                         antilink: true,
                         response: true,
